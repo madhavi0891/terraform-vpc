@@ -63,3 +63,4 @@ resource "aws_route_table_association" "database" {
 
   subnet_id      = "${element(aws_subnet.database.*.id, count.index)}"
   route_table_id = "${element(aws_route_table.database.*.id, count.index)}"
+  }
